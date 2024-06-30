@@ -10,6 +10,7 @@ import { User } from './user.model';
 })
 export class UserComponent {
   @Input({ required: true }) user!: User;
+  @Input({ required: true }) selected!: boolean;
   @Output() select = new EventEmitter();
 
   // input signals NOTE: there are read only signals, can't change their value in this component by calling set method
